@@ -1,0 +1,51 @@
+.navbar {
+    padding: 0.4rem 5rem;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.kl-content {
+    flex: 1;
+}
+
+
+.btn-primary {
+    --bs-btn-color: #fff !important;
+}
+
+.btn-form {
+    display: inline-block;
+}
+
+.btn-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.del {
+    display: inline-flex;
+}
+
+.card-advert {
+    width: 95%;
+}
+
+.img-fluid-admin {
+    max-width: 85%;
+}
+
+.img-fluid-front {
+    max-width: 200px;
+}
+
+.price {
+    font-size: 1.2em;
+}
+
+.category-menu {
+    margin:5px;
+}

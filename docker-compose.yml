@@ -1,0 +1,60 @@
+version: '3.9'
+services:
+      nginx:
+        image: nginx:latest
+        ports:
+          - "80:80"
+          - "5173:5173"
+        volumes:
+          - ./docker/hosts:/etc/nginx/conf.d
+          - ./www:/var/www
+          - ./docker/logs:/var/log/nginx
+        links:
+          - php
+      php:
+        build: ./docker/images
+        volumes:
+          - ./www:/var/www
+        links:
+          - mysql
+          - mysql-test
+          - typesense
+      mysql:
+        image: mariadb:10.3
+        volumes:
+        - ./docker/mysql:/var/lib/mysql
+        environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: klein
+          MYSQL_USER: klein
+          MYSQL_PASSWORD: klein
+        restart: always
+      mysql-test:
+        image: mariadb:10.3
+        volumes:
+        - ./docker/mysql-test:/var/lib/mysql
+        environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: klein
+          MYSQL_USER: klein
+          MYSQL_PASSWORD: klein
+        restart: always
+      pma:
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        links:
+          - mysql:mysql
+        ports:
+          - 8081:80
+        environment:
+          PMA_HOST: mysql
+          MYSQL_USERNAME: root
+          MYSQL_ROOT_PASSWORD: root
+      typesense:
+          image: typesense/typesense:0.24.1
+          restart: on-failure
+          ports:
+            - "8108:8108"
+          volumes:
+            - ./docker/typesense-data:/data
+          command: '--data-dir /data --api-key=xyz --enable-cors'

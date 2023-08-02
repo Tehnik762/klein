@@ -1,0 +1,20 @@
+Autos~Marke~string~1~Toyota, Volkswagen, Ford, Honda, Nissan, Chevrolet, Hyundai, Kia, Mercedes-Benz, BMW, Audi, Peugeot, Fiat, Renault, Opel, Skoda, Mazda, Mitsubishi, Subaru, Suzuki, Volvo, Mini, Jeep, Land Rover, Porsche, Lexus, Citroen, Jaguar, Chrysler, Dodge, Ram, Tesla, Genesis, Infiniti, Acura, Alfa Romeo, Maserati, Bugatti, Ferrari, Lamborghini, Aston Martin, Bentley, Rolls-Royce, McLaren, Bugatti, Pagani, Koenigsegg~1
+Autos~Kilometerstand~integer~1~~2
+Autos~Fahrzeugzustand~string~1~Beschädigtes, Unbeschädigtes~3
+Autos~Kraftstoffart~string~1~Benzin, Diesel, Erdgas, Autogas, Hybrid, Elektro, Andere Kraftstoffarten~4
+Autos~Getriebe~string~1~Automatik, Manuell~5
+Autos~Anzahl Türen~integer~0~2,3,4,5,6,7~6
+Autos~Anzahl Sitze~integer~0~1,2,3,4,5,6,7,8,9,10~7
+Fahrräder~Art~string~0~Damen, Herren, Kinder~1
+Fahrräder~Typ~string~1~Cityräder, Cross- & Trekkingräder, Elektrofahrräder, Mountainbikes, Andere Fahrräder~2
+Handys~Art~string~1~Apple, Samsung, Huawei, Xiaomi, Oppo, Vivo, OnePlus, Motorola, LG, Sony, Weitere Handys~1
+Handys~Zustand~string~1~Neu, Gebraucht, Defekt~2
+Häuser zum Kauf~Wohnfläche~float~1~~1
+Häuser zum Kauf~Zimmer~integer~1~~2
+Häuser zum Kauf~Baujahr~integer~1~~3
+Häuser zur Miete~Wohnfläche~float~1~~1
+Häuser zur Miete~Zimmer~integer~1~~2
+Mietwohnungen~Wohnfläche~float~1~~1
+Mietwohnungen~Zimmer~integer~1~~2
+Mietwohnungen~Etage~integer~0~~2
+Auto und Rad~Anbieter~string~1~Privat, Gewerblich~1

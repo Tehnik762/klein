@@ -1,0 +1,8 @@
+.DS_Store
+docker/logs/
+docker/mysql/
+docker/typesense-data/db/LOG
+docker/typesense-data/meta/LOG
+.vscode/
+docker/typesense-data/
+docker/mysql-test/
