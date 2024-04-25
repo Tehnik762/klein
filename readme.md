@@ -63,7 +63,4 @@ To seed a test database: `docker-compose exec php php artisan migrate --env=test
 ## Disclaimer
 
 This project is for educational purposes and may contain bugs or incomplete features. It is not intended for production use.
-<<<<<<< HEAD
 During first installation it will take time to download demo images for ads.
-=======
->>>>>>> 297f673 (prepared for sommit)
